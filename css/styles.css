@@ -10,14 +10,14 @@
 
 body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #3d405b;
+    color: #3D405B;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background-color: #81b29a;
+    background-color: #81B29A;
 }
 
 main {
@@ -98,6 +98,87 @@ nav a:focus {
 .container-main {
     text-align: center;
     padding: 3em 0;
+}
+
+/* -----ADD.HTML----- */
+
+.container-input {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.container-input label {
+    margin: 1rem 0 0.25rem 0;
+}
+
+.container-input input {
+    height: 2rem;
+    color: #3D405B;
+    border: solid 1px #3D405B;
+    padding: 0 0.3rem;
+}
+
+.container-input input::placeholder {
+    color: #3D405B;
+}
+
+.container-input input:focus,
+.container-input select:focus {
+    outline: solid 1.5px #3D405B;
+    border-radius: 2px;
+}
+
+.container-input select {
+    height: 2rem;
+    color: #3D405B;
+    border: solid 1px #3D405B;
+}
+
+.food-ingredients-input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#food-ingredients {
+    width: 100%;
+}
+
+.food-ingredients-input button {
+    margin-left: 0.5em;
+    padding: 0 1em;
+    color: #3D405B;
+}
+
+#add-btn {
+    background-color: #81B29A;
+    border: none;
+    font-weight: 700;
+}
+
+#clear-btn {
+    background-color: #E07A5F;
+    border: none;
+    font-weight: 700;
+}
+
+#add-btn:hover, 
+#clear-btn:hover {
+    background-color: #F2CC8F;
+}
+
+.food-ingredients-list {
+    border: solid 1px #3D405B;
+    margin: 0.5rem 0 0.25rem 0;
+    padding: 0.25rem 0.5rem;
+}
+
+.food-ingredients-list:empty {
+    display: none;
 }
 
 /* --------------------
