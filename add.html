@@ -24,7 +24,26 @@
         <main>
             <div class="container container-main">
                 <h1>RECIPE VIEW</h1>
-                <div></div>
+                <div class="container-input">
+                    <label for="food-name">Name</label>
+                    <input type="text" placeholder="Food Name" id="food-name">
+                    <label for="food-type">Type</label>
+                    <select id="food-type">
+                        <option value="">Select food type...</option>
+                        <option value="poultry">Poultry</option>
+                        <option value="pork">Pork</option>
+                        <option value="beef">Beef</option>
+                        <option value="seafood">Seafood</option>
+                        <option value="vegetable">Vegetable</option>
+                    </select>
+                    <label for="food-ingredients">Ingredients</label>
+                    <div class="food-ingredients-input">
+                        <input id="food-ingredients" type="text" placeholder="Add your ingredients">
+                        <button id="add-btn">Add</button>
+                        <button id="clear-btn">Clear</button>
+                    </div>
+                    <div class="food-ingredients-list"></div>
+                </div>
             </div>
         </main>
 
