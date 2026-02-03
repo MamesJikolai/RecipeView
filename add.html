@@ -27,6 +27,7 @@
                 <div class="container-input">
                     <label for="food-name">Name</label>
                     <input type="text" placeholder="Food Name" id="food-name">
+
                     <label for="food-type">Type</label>
                     <select id="food-type">
                         <option value="">Select food type...</option>
@@ -36,13 +37,16 @@
                         <option value="seafood">Seafood</option>
                         <option value="vegetable">Vegetable</option>
                     </select>
+
                     <label for="food-ingredients">Ingredients</label>
                     <div class="food-ingredients-input">
                         <input id="food-ingredients" type="text" placeholder="Add your ingredients">
                         <button id="add-btn">Add</button>
                         <button id="clear-btn">Clear</button>
                     </div>
-                    <div class="food-ingredients-list"></div>
+                    <div id="food-ingredients-list"></div>
+
+                    <button id="submit-btn">SUBMIT</button>
                 </div>
             </div>
         </main>
@@ -52,6 +56,6 @@
                 <p><span>Add your recipes.</span> Cook to your heart's content.</p>
             </div>
         </footer>
-        <script src="js/index.js"></script>
+        <script src="js/add.js"></script>
     </body>
 </html>
