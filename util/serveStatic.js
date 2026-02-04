@@ -17,6 +17,11 @@ export async function serveStatic(request, response, baseDir) {
         sendResponse(response, 200, contentType, content)
     }
     catch (err) {
-        console.log(err)
+        if (err.code === 'ENOENT') {
+            sendResponse(response, 404, 'text/plain', '404: File Not Found')
+        } else {
+            console.error("Server Error", err)
+            sendResponse(response, 500, 'text/plain', '500: Internal Server Error')
+        }
     }
 }

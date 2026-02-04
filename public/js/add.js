@@ -4,6 +4,7 @@ const foodIngredients = document.getElementById('food-ingredients')
 const addBtn = document.getElementById('add-btn')
 const clearBtn = document.getElementById('clear-btn')
 const foodIngredientsList = document.getElementById('food-ingredients-list')
+const submitBtn = document.getElementById('submit-btn');
 
 let ingredientsArr = []
 let idCount = ingredientsArr.length
@@ -61,3 +62,30 @@ function addIngredients (text) {
     ingredientItemContainer.appendChild(ingredientItemLabel)
     foodIngredientsList.appendChild(ingredientItemContainer)
 }
+
+submitBtn.addEventListener('click', function() {
+    // 1. Select all checkboxes with the name "food-type" that are currently :checked
+    const checkedTypes = document.querySelectorAll('input[name="food-type"]:checked');
+    
+    // 2. Convert the NodeList into an Array of just the values
+    const selectedTypesArr = Array.from(checkedTypes).map(checkbox => checkbox.value);
+
+    // 3. Create your final object to save
+    const newRecipe = {
+        name: foodName.value,
+        type: selectedTypesArr, // This is now an array, e.g., ["pork", "vegetable"]
+        ingredients: ingredientsArr
+    };
+
+    console.log("Ready to save:", newRecipe);
+
+    foodName.value = ''
+    checkedTypes.forEach(checkbox => {
+        checkbox.checked = false
+    })
+    foodIngredientsList.innerHTML = ''
+
+    
+    // Optional: Send to your API
+    // saveRecipe(newRecipe);
+})

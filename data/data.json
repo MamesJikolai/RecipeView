@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Pork Adobo",
+        "type": [
+            "Pork"
+        ],
+        "ingredients": [
+            "Pork belly",
+            "Garlic",
+            "Soy sauce",
+            "Vinegar",
+            "Bayleaves",
+            "Black pepper",
+            "Salt",
+            "Water"
+        ]
+    },
+    {
+        "name": "Beef Giniling",
+        "type": [
+            "Beef",
+            "Vegetable"
+        ],
+        "ingredients": [
+            "Ground beef",
+            "Garlic",
+            "Onion",
+            "Carrots",
+            "Potato",
+            "Black pepper",
+            "Salt",
+            "Oyster sauce"
+        ]
+    },
+    {
+        "name": "Pork Sinigang",
+        "type": [
+            "Pork",
+            "Vegetable"
+        ],
+        "ingredients": [
+            "Pork belly",
+            "Garlic",
+            "Onion",
+            "Tomato",
+            "Water",
+            "Black pepper",
+            "Salt",
+            "Pork cube",
+            "Sinigang mix",
+            "Radish",
+            "Sigarilyas",
+            "Okra",
+            "Kangkong"
+        ]
+    },
+    {
+        "name": "Kimchi Jjigae (Chicken)",
+        "type": [
+            "Poultry",
+            "Vegetable"
+        ],
+        "ingredients": [
+            "Chicken breast",
+            "Garlic",
+            "Onion",
+            "Kimchi",
+            "Water",
+            "Gochujang",
+            "Gochugaru",
+            "Soy sauce",
+            "Mushroom",
+            "Tofu"
+        ]
+    },
+    {
+        "name": "Bulanglang",
+        "type": [
+            "Vegetable"
+        ],
+        "ingredients": [
+            "Garlic",
+            "Onion",
+            "Tomato",
+            "Water",
+            "Patis",
+            "Kalabasa",
+            "Okra",
+            "Eggplant",
+            "Patola"
+        ]
+    }
+]

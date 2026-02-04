@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="icon" type="image/png" href="assets/images/frying-pan-32px.png">
         <title>Recipe View</title>
     </head>
     <body>
@@ -28,15 +29,14 @@
                     <label for="food-name">Name</label>
                     <input type="text" placeholder="Food Name" id="food-name">
 
-                    <label for="food-type">Type</label>
-                    <select id="food-type">
-                        <option value="">Select food type...</option>
-                        <option value="poultry">Poultry</option>
-                        <option value="pork">Pork</option>
-                        <option value="beef">Beef</option>
-                        <option value="seafood">Seafood</option>
-                        <option value="vegetable">Vegetable</option>
-                    </select>
+                    <label>Type (Select all that apply)</label>
+                    <div class="food-type">
+                        <label><input type="checkbox" name="food-type" value="Poultry"> Poultry</label>
+                        <label><input type="checkbox" name="food-type" value="Pork"> Pork</label>
+                        <label><input type="checkbox" name="food-type" value="Beef"> Beef</label>
+                        <label><input type="checkbox" name="food-type" value="Seafood"> Seafood</label>
+                        <label><input type="checkbox" name="food-type" value="Vegetable"> Vegetable</label>
+                    </div>
 
                     <label for="food-ingredients">Ingredients</label>
                     <div class="food-ingredients-input">
