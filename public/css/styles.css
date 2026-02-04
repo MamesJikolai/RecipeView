@@ -107,15 +107,18 @@ nav a:focus {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0;
-    align-items: center;
+    gap: 20px; /* Adds space between cards */
+    align-items: flex-start; /* Aligns them to the top */
     margin-top: 2rem;
-    border: solid 1px red;
 }
 
 .recipe-card {
-    padding: 0 2em;
-    border: solid 1px red;
+    padding: 2em; /* Balanced padding */
+    border: 1px solid #3D405B; /* Clean border instead of red */
+    border-radius: 8px;
+    background-color: #F2CC8F; /* Light cream background to contrast the white page */
+    width: 300px; /* Gives cards a consistent size */
+    margin: 10px;
 }
 
 .recipe-card h3 {
@@ -128,7 +131,7 @@ nav a:focus {
 
 .ingredients-list {
     list-style-type: none;
-    padding: 0 2em;
+    padding: 0;
     margin: 1rem 0;
 }
 
@@ -144,6 +147,7 @@ nav a:focus {
 }
 
 .recipe-card.expanded .ingredients-text-wrapper {
+    max-height: 500px;
     margin-bottom: 1rem;
 }
 
