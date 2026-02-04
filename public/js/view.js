@@ -7,37 +7,44 @@ try {
 }
 
 function renderCards(cardsData) {
+    console.log("Attempting to render:", cardsData); // Debug Log 1
     const container = document.querySelector('.cards-container');
     
-    // Ensure the container exists before trying to inject HTML
-    if (!container) return;
+    if (!container) {
+        console.error("Could not find .cards-container in the HTML");
+        return;
+    }
 
     let cardsHTML = '';
 
     cardsData.forEach((card, i) => {
-        // Split string into array, trim whitespace, and wrap in <li>
-        const recipeType = card.type
-            .map(item => item.trim())
-            .join(' | ');
+        try {
+            // Handle Type (Check if it exists and is an array)
+            const typeArr = Array.isArray(card.type) ? card.type : [card.type];
+            const recipeType = typeArr.map(t => String(t).trim()).join(' | ');
 
-        const ingredientsList = card.ingredients
-            .map(item => `<li>${item.trim()}</li>`)
-            .join('');
+            // Handle Ingredients (Check if it exists and is an array)
+            const ingArr = Array.isArray(card.ingredients) ? card.ingredients : [];
+            const ingredientsList = ingArr.map(ing => `<li>${String(ing).trim()}</li>`).join('');
 
-        cardsHTML += `
-        <article class="recipe-card" aria-labelledby="food-name-${i}">
-            <p class="recipe-type">${recipeType}</p>
-            <h3 id="food-name-${i}">${card.name}</h3>
-            <div class="ingredients-text-wrapper">
-                <ul class="ingredients-list">
-                    ${ingredientsList}
-                </ul>
-            </div>
-            <button class="read-more-btn" aria-expanded="false">Read in full</button>
-        </article>
-        `;
+            cardsHTML += `
+            <article class="recipe-card" aria-labelledby="food-name-${i}">
+                <p class="recipe-type">${recipeType}</p>
+                <h3 id="food-name-${i}">${card.name}</h3>
+                <div class="ingredients-text-wrapper">
+                    <ul class="ingredients-list">
+                        ${ingredientsList}
+                    </ul>
+                </div>
+                <button class="read-more-btn" aria-expanded="false">Read in full</button>
+            </article>
+            `;
+        } catch (loopErr) {
+            console.error(`Error processing card at index ${i}:`, loopErr);
+        }
     });
 
+    console.log("HTML generated successfully"); // Debug Log 2
     container.innerHTML = cardsHTML;
 }
 
