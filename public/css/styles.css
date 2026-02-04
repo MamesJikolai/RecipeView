@@ -1,0 +1,243 @@
+/* --------------------
+        GLOBAL
+-------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #3D405B;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #81B29A;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #E07A5F;
+}
+
+h1{
+    letter-spacing: 0.1em;
+}
+
+/* --------------------
+        LAYOUT
+-------------------- */
+
+/* .container,
+.container-nav,
+.navbar,
+.container-footer,
+nav ul {
+    border: solid 2px red;
+} */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --------------------
+        NAVBAR
+-------------------- */
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.container-nav img {
+    width: 32px;
+    height: 32px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3D405B;
+    font-weight: 700;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #F2CC8F;
+}
+
+.current {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* --------------------
+        MAIN
+-------------------- */
+
+.container-main {
+    text-align: center;
+    padding: 3em 0;
+}
+
+/* -----ADD.HTML----- */
+
+.container-input {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.container-input label {
+    margin: 1rem 0 0.25rem 0;
+}
+
+.container-input input:not([type="checkbox"]) {
+    height: 2rem;
+    color: #3D405B;
+    border: solid 1px #3D405B;
+    padding: 0 0.3rem;
+}
+
+.container-input input::placeholder {
+    color: #3D405B;
+}
+
+.container-input input:focus,
+.container-input select:focus {
+    outline: solid 1.5px #3D405B;
+    border-radius: 2px;
+}
+
+.container-input select {
+    height: 2rem;
+    color: #3D405B;
+    border: solid 1px #3D405B;
+}
+
+.food-ingredients-input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#food-ingredients {
+    width: 100%;
+}
+
+.food-ingredients-input button {
+    margin-left: 0.5em;
+    padding: 0 1em;
+    color: #3D405B;
+}
+
+#add-btn {
+    background-color: #81B29A;
+    border: none;
+    font-weight: 700;
+}
+
+#clear-btn {
+    background-color: #E07A5F;
+    border: none;
+    font-weight: 700;
+}
+
+#add-btn:hover, 
+#clear-btn:hover {
+    background-color: #F2CC8F;
+}
+
+#food-ingredients-list {
+    border: solid 1px #3D405B;
+    margin: 0.5rem 0 0.25rem 0;
+    padding: 0.25rem 0.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+#food-ingredients-list:empty {
+    display: none;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    border-bottom: solid 1px #3D405B;
+}
+
+.item-container label {
+    margin: 0;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.item-container:last-child {
+    border-bottom: none;
+}
+
+#food-ingredients-list:empty + #submit-btn {
+  display: none;
+}
+
+#submit-btn {
+    margin-top: 1em;
+    color: #3D405B;
+    background-color: #81B29A;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border: none;
+    padding: 0.5em 0;
+}
+
+#submit-btn:hover {
+    background-color: #F2CC8F;
+}
+
+/* --------------------
+        FOOTER
+-------------------- */
+
+.container-footer {
+    text-align: center;
+    padding: 1.5em 0;
+    color: #F4F1DE;
+}
+
+footer p {
+    font-size: 0.75rem;
+}
+
+footer span {
+    color: #3D405B;
+    font-weight: 700;
+}
+
+/* --------------------
+        MEDIA
+-------------------- */

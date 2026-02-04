@@ -1,0 +1,12 @@
+{
+  "name": "receipe-view",
+  "version": "1.0.0",
+  "description": "An app to add and view your recipe and ingredients",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
