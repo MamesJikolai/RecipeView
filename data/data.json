@@ -89,5 +89,62 @@
             "Eggplant",
             "Patola"
         ]
+    },
+    {
+        "name": "Cabbage Stir Fry",
+        "type": [
+            "Vegetable"
+        ],
+        "ingredients": [
+            "Garlic",
+            "Cabbage",
+            "Salt",
+            "Pepper",
+            "Sesame oil"
+        ]
+    },
+    {
+        "name": "Corned Beef with Potatoes",
+        "type": [
+            "Beef",
+            "Vegetable"
+        ],
+        "ingredients": [
+            "Onion",
+            "Garlic",
+            "Potato",
+            "Corned beef"
+        ]
+    },
+    {
+        "name": "Ampalaya with Egg",
+        "type": [
+            "Poultry",
+            "Vegetable"
+        ],
+        "ingredients": [
+            "Garlic",
+            "Onion",
+            "Tomato",
+            "Ampalaya",
+            "Egg",
+            "Salt",
+            "Pepper"
+        ]
+    },
+    {
+        "name": "Corned Tuna Sisig",
+        "type": [
+            "Seafood"
+        ],
+        "ingredients": [
+            "Garlic",
+            "Onion",
+            "Corned tuna",
+            "Salt",
+            "Pepper",
+            "Calamansi",
+            "Egg"
+        ]
     }
 ]

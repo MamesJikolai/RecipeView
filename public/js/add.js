@@ -63,7 +63,7 @@ function addIngredients (text) {
     foodIngredientsList.appendChild(ingredientItemContainer)
 }
 
-submitBtn.addEventListener('click', function() {
+submitBtn.addEventListener('click', async function() {
     // 1. Select all checkboxes with the name "food-type" that are currently :checked
     const checkedTypes = document.querySelectorAll('input[name="food-type"]:checked');
     
@@ -79,12 +79,28 @@ submitBtn.addEventListener('click', function() {
 
     console.log("Ready to save:", newRecipe);
 
-    foodName.value = ''
-    checkedTypes.forEach(checkbox => {
-        checkbox.checked = false
-    })
-    foodIngredientsList.innerHTML = ''
+    try {
+        const response = await fetch("/api", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newRecipe)
+        })
 
+        if (response.ok) {
+            console.log('Recipe uploaded to server...')
+            foodName.value = ''
+            checkedTypes.forEach(checkbox => {
+                checkbox.checked = false
+            })
+            foodIngredientsList.innerHTML = ''
+        } else {
+            console.error("Server Error: ", response.statusText)
+        }
+    } catch (err) {
+        console.error("Error: ", err)
+    }
     
     // Optional: Send to your API
     // saveRecipe(newRecipe);
